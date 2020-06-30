@@ -1,7 +1,7 @@
-FROM node:10
+FROM mhart/alpine-node
 WORKDIR /app
 COPY package.json /app
 RUN npm install
-COPY ./app
+COPY . /app
 CMD node index.js
 EXPOSE 7000
