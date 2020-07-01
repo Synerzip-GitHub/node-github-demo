@@ -38,6 +38,7 @@ jobs:
   deploy:
     name: Deploy
     runs-on: private-instance
+    needs: build
 
     steps:
     - name: Configure AWS credentials
