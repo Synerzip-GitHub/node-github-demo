@@ -34,4 +34,12 @@ jobs:
         # be deployed to ECS. 
         docker push $ECR_REGISTRY/$ECR_REPOSITORY:$IMAGE_TAG
         echo "::set-output name=image::$ECR_REGISTRY/$ECR_REPOSITORY:$IMAGE_TAG"
-  
+        
+  deploy1:
+    name: deploy
+    runs-on: private-instance
+
+    steps:
+    - name: Checkout
+      run: |
+        echo hostname
