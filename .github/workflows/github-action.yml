@@ -42,4 +42,4 @@ jobs:
     steps:
     - name: Checkout
       run: |
-        echo hostname
+        docker pull hello-world
